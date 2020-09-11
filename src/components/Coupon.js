@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./couponStyle.scss";
 
 const Coupon = () => {
+  const [isClicked, setIsClicked] = useState(false);
+  const onCouponClick = () => {
+    setIsClicked(!isClicked);
+  };
   return (
     <div className="container">
       <div className="couponContainer">
@@ -13,7 +17,7 @@ const Coupon = () => {
       </div>
       <div className="removable">
         <div className="leftSide">
-          <div className="contactDetails">
+          <div className="contactDetails" onClick={onCouponClick}>
             <p className="info">
               Евгений <br />
               +38(063) 266-44-28
@@ -21,13 +25,16 @@ const Coupon = () => {
           </div>
         </div>
         <div className="rigthSide">
-          <div className="contactDetails">
+          <div
+            onClick={onCouponClick}
+            className={isClicked ? "contactDetails clicked" : "contactDetails"}
+          >
             <p className="info">
               Евгений <br />
               +38(063) 266-44-28
             </p>
           </div>
-          <div className="contactDetails">
+          <div onClick={onCouponClick} className="contactDetails">
             <p className="info">
               Евгений <br />
               +38(063) 266-44-28

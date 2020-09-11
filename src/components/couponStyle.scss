@@ -38,6 +38,7 @@
       justify-content: flex-start;
     }
     .contactDetails {
+      transition: 1.5s;
       width: 60px;
       margin-right: 3px;
       height: 200px;
@@ -51,6 +52,14 @@
         width: 200px;
         height: 60px;
       }
+    }
+    .clicked {
+      transition: 3s;
+      transform: rotate(-90deg) scale(3);
+      z-index: 3;
+
+      // background-color: #fff;
+      // font-size: 20px;
     }
   }
 
