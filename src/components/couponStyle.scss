@@ -38,6 +38,7 @@
       justify-content: flex-start;
     }
     .contactDetails {
+      cursor: pointer;
       transition: 1.5s;
       width: 60px;
       margin-right: 3px;
@@ -47,30 +48,53 @@
         1px 2px 5px 0px rgba(142, 122, 122, 0.29);
       position: relative;
       .info {
-        transform: rotate(90deg) translate(43px, 71px);
+        transform: rotate(90deg) translate(43px, 74px);
         position: absolute;
         width: 200px;
         height: 60px;
       }
     }
+    .contactDetails:hover {
+      transition: 1s;
+      background-color: lightgray;
+    }
+    .main {
+      z-index: 3;
+    }
     .clicked {
       transition: 3s;
-      transform: rotate(-90deg) scale(3);
+      transform: rotate(-90deg) scale(2.5) translate(40px, -11px);
       z-index: 3;
-
-      // background-color: #fff;
-      // font-size: 20px;
     }
   }
 
   @media only screen and (max-width: 500px) {
     .couponContainer {
-      height: 300px;
-      width: 90%;
+      height: 150px;
+      width: 300px;
+      padding: 10px;
     }
+
     .removable {
-      height: 300px;
-      width: 90%;
+      height: 150px;
+      width: 300px;
+      .leftSide {
+        width: 150px;
+        height: 150px;
+      }
+      .rigthSide {
+        width: 150px;
+        height: 150px;
+      }
+      .contactDetails {
+        height: 150;
+        .info {
+          width: 150;
+        }
+      }
+      .clicked {
+        transform: rotate(-90deg) scale(1.8) translate(43px, -24px);
+      }
     }
   }
 }

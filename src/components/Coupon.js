@@ -27,7 +27,9 @@ const Coupon = () => {
         <div className="rigthSide">
           <div
             onClick={onCouponClick}
-            className={isClicked ? "contactDetails clicked" : "contactDetails"}
+            className={
+              isClicked ? "contactDetails clicked main" : "contactDetails main"
+            }
           >
             <p className="info">
               Евгений <br />
