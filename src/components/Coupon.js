@@ -7,7 +7,7 @@ const Coupon = () => {
   const onCouponClick = () => {
     setIsClicked(!isClicked);
   };
-  const phoneNumber = "+38(063) 266-44-..";
+  const phoneNumber = "+38(063) 266-44-28";
 
   return (
     <div className="container">
