@@ -9,7 +9,7 @@ import {
 } from "react-share";
 import "./shareButtons.style.scss";
 
-const shareUrl = "";
+const shareUrl = "https://eugen-computer-master.netlify.app";
 const summary = "👨‍🔧Компьютерный мастер Житомир";
 const ShareButtons = () => {
   return (
