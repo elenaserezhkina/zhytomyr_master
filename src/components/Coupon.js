@@ -1,13 +1,19 @@
 import React, { useState } from "react";
 import "./couponStyle.scss";
+import ShareButtons from "./ShareButtons";
 
 const Coupon = () => {
   const [isClicked, setIsClicked] = useState(false);
   const onCouponClick = () => {
     setIsClicked(!isClicked);
   };
+  const phoneNumber = "+38(063) 266-44-..";
+
   return (
     <div className="container">
+      <div className="buttonsContainer">
+        <ShareButtons />
+      </div>
       <div className="couponContainer">
         <header>
           👨‍🔧Компьютерный мастер. <br />
@@ -20,7 +26,7 @@ const Coupon = () => {
           <div className="contactDetails" onClick={onCouponClick}>
             <p className="info">
               Евгений <br />
-              +38(063) 266-44-28
+              {phoneNumber}
             </p>
           </div>
         </div>
@@ -33,13 +39,13 @@ const Coupon = () => {
           >
             <p className="info">
               Евгений <br />
-              +38(063) 266-44-28
+              {phoneNumber}
             </p>
           </div>
           <div onClick={onCouponClick} className="contactDetails">
             <p className="info">
               Евгений <br />
-              +38(063) 266-44-28
+              {phoneNumber}
             </p>
           </div>
         </div>
